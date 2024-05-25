@@ -3,6 +3,7 @@ local dlg = Dialog {
 }
 
 local sprite = app.activeSprite
+local defaultColor = app.fgColor
 
 local directions = {
     ["up-left"] = {x = -1, y = -1},
@@ -40,7 +41,7 @@ local buttonText = {
 dlg:color {
     id = "color",
     label = "Outline Color: ",
-    color = Color(0, 0, 0, 255)
+    color = defaultColor
 }
 
 dlg:separator {
