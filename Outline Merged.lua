@@ -165,13 +165,12 @@ dlg:button{
         local layers = range.layers
         local frameNumToCels
 
-        if (range.type == RangeType.EMPTY) then
-            app.alert("Selection is empty. Cancelling...")
-            return
-        elseif (range.type == RangeType.FRAMES) then
+        if (range.type == RangeType.FRAMES) then
             app.alert(
-                "Selected frames. Please select either cels or layers. Cancelling...")
+                "Frames selected. Please select either cels, layers, or leave the selection empty to select all cels. Cancelling...")
             return
+        elseif (range.type == RangeType.EMPTY) then
+            frameNumToCels = getCellsFromLayers(sprite.layers)
         elseif (range.type == RangeType.LAYERS) then
             frameNumToCels = getCellsFromLayers(range.layers)
         elseif (range.type == RangeType.CELS) then
@@ -185,7 +184,8 @@ dlg:button{
         for i = 2, dlg.data.thickness do
             frameNumToMergedImage = mergeFrameImages(frameNumToMergedImage,
                                                      outlines)
-            outlines = mergeFrameImages(outlines, outline(frameNumToMergedImage))
+            outlines =
+                mergeFrameImages(outlines, outline(frameNumToMergedImage))
         end
 
         drawImages(outlines)
