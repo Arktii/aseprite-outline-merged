@@ -21,7 +21,8 @@ Just download **Outline Merged.lua** and drop it into the scripts folder <br>
 ### 3. Select layers or cells
 ![image](https://github.com/Arktii/aseprite-outline-merged/assets/72131971/7eb5fa89-ee23-4682-b32d-c4bba11b292e) <br>
 OR <br>
-![image](https://github.com/Arktii/aseprite-outline-merged/assets/72131971/b9d8bb04-644b-47b0-ae5a-0f6db272cf9c)
+![image](https://github.com/Arktii/aseprite-outline-merged/assets/72131971/b9d8bb04-644b-47b0-ae5a-0f6db272cf9c) <br>
+If nothing is selected, then everything will be outlined
 
 ### 4. Click Outline 
 ![image](https://github.com/user-attachments/assets/805de308-e6d8-4539-8345-63a5491a2417)
